@@ -22,7 +22,7 @@ def build_cnn_predictor(input_shape):
     model.add(layers.Flatten())
     
     model.add(layers.Dense(1024, activation='relu'))
-    model.add(layers.Dense(dim * dim * 3, activation='sigmoid')) 
+    model.add(layers.Dense(dim * dim * 3, activation='tanh')) 
     
     model.add(layers.Reshape((dim, dim, 3)))
 
