@@ -3,7 +3,7 @@ from tensorflow.keras import layers, models
 
 dim = 64
 input_shape = (None, dim, dim, 3) 
-sequence_length = 10 
+sequence_length = 1
 
 def build_cnn_predictor(input_shape):
     model = models.Sequential()
