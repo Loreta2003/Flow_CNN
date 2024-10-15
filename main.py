@@ -16,10 +16,10 @@ cnn_predictor.compile(optimizer='adam', loss='mean_squared_error')
 
 cnn_predictor.summary()
 
-history = cnn_predictor.fit(X_train, y_train, epochs=100, batch_size=4, validation_data=(X_val, y_val), verbose=1)
+history = cnn_predictor.fit(X_train, y_train, epochs=10, batch_size=4, validation_data=(X_val, y_val), verbose=1)
 
 example = data.example
 example_output = data.example_output
 example = np.expand_dims(example, axis = 0)
-predicted_example_output = cnn_predictor.predict(example)
+predicted_example_output = cnn_predictor.predict(example)[0]
 data.Print_U_V_W(example_output, predicted_example_output)
