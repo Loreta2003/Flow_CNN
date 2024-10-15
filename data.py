@@ -1,28 +1,28 @@
 import json
+import numpy as np
+import matplotlib.pyplot as plt
 
-seq_len = 10
+seq_len = 1
 with open('training.json', 'r') as file:
     data = json.load(file)
+    data = np.array(data)
 
 training_data = []
 training_output = []
 
-for sample in range(50):
+for sample in range(8000):
     training_data.append(data[sample:sample+seq_len])
     training_output.append(data[sample+seq_len])
 
 validation_data = []
 validation_output = []
 
-for sample in range(51, 80):
+for sample in range(8000, 8500):
     validation_data.append(data[sample:sample+seq_len])
     validation_output.append(data[sample+seq_len])
 
-# print(training_data[-1][0][0][0][2])
-# print(training_output[0][0][0][2])
-
-example = data[70:80]
-example_output = data[81]
+example = data[8500:8501]
+example_output = data[8501]
 
 def U_Array(data_point):
     return data_point[:, :, 0]
