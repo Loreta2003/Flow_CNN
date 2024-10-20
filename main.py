@@ -18,6 +18,8 @@ cnn_predictor.summary()
 
 history = cnn_predictor.fit(X_train, y_train, epochs=10, batch_size=4, validation_data=(X_val, y_val), verbose=1)
 
+cnn_predictor.save('flow_CNN.h5')
+
 example = data.example
 example_output = data.example_output
 example = np.expand_dims(example, axis = 0)
