@@ -1,1 +1,1 @@
-model_Koopman_flow.py file is for the flow problem and model_Koopman_sine.py is for ensuring that Koopman theory works for simple examples. To run the flow one, you should first run the 
+model_Koopman_flow.py file is for the flow problem and model_Koopman_sine.py is for ensuring that Koopman theory works for simple examples. To run the flow one, you should first run the "read_matlab_for_Koopman.py" by having ../minimal_2D_UVW_yplus_20.mat flow datafile in your directory.
